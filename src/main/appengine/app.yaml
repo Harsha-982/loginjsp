@@ -1,0 +1,2 @@
+runtime: java11
+entrypoint : java -cp loginjsp-1.0-SNAPSHOT-all.jar MainServer

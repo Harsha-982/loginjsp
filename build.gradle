@@ -1,0 +1,40 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'com.github.johnrengelman.shadow' version '5.1.0'
+}
+
+mainClassName = "MainServer"
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+task copyfiles(type : Copy){
+    from './src/main/web'
+    into layout.buildDirectory.dir("classes/java/main/META-INF/resources")
+}
+shadowJar{
+    manifest{
+        attributes "Main-Class" :mainClassName
+    }
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+
+    implementation 'org.eclipse.jetty:jetty-server:9.4.43.v20210629'
+    implementation 'org.eclipse.jetty:jetty-servlet:9.4.43.v20210629'
+    implementation 'org.eclipse.jetty:jetty-webapp:9.4.43.v20210629'
+
+    implementation 'org.eclipse.jetty:apache-jsp:9.2.15.v20160210'
+    implementation 'org.eclipse.jetty:jetty-plus:9.4.43.v20210629'
+    implementation 'org.eclipse.jetty:jetty-annotations:9.4.43.v20210629'
+}
+
+test {
+    useJUnitPlatform()
+}
