@@ -26,6 +26,7 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
 
+    implementation 'com.google.cloud:google-cloud-datastore:1.104.0'
     implementation 'org.eclipse.jetty:jetty-server:9.4.43.v20210629'
     implementation 'org.eclipse.jetty:jetty-servlet:9.4.43.v20210629'
     implementation 'org.eclipse.jetty:jetty-webapp:9.4.43.v20210629'
