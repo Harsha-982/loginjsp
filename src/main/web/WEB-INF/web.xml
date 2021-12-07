@@ -11,6 +11,15 @@
         <servlet-name>validate</servlet-name>
         <url-pattern>/validate</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>like</servlet-name>
+        <servlet-class>LikePage</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>like</servlet-name>
+        <url-pattern>/like</url-pattern>
+    </servlet-mapping>
     <welcome-file-list>
         <welcome-file>Login.jsp</welcome-file>
     </welcome-file-list>
