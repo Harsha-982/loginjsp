@@ -20,6 +20,15 @@
         <servlet-name>like</servlet-name>
         <url-pattern>/like</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>registerCheck</servlet-name>
+        <servlet-class>RegisterCheck</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>registerCheck</servlet-name>
+        <url-pattern>/registerCheck</url-pattern>
+    </servlet-mapping>
     <welcome-file-list>
         <welcome-file>Login.jsp</welcome-file>
     </welcome-file-list>

@@ -7,72 +7,30 @@
   </head>
   <body>
   <span id="result"></span>
-  <span id="status"> </span>
-<div id ="form">
-      Username : <input type="text" id="username"><br>
-      Password : <input type="text" id="password"><br>
-      <button type="button" id="btnSubmit">Login</button>
+
+  <div id ="signUpForm">
+      Username : <input type="text" id="signUpUser"><br>
+      Password : <input type="text" id="signUpPassword"><br>
+      Confirm Password : <input type="text" id="confirm">
+      <button type="button" id="Register">SignUp</button>
+  </div>
+     <a href="#">Return to home page</a>
+
+
+<div id ="form" name="myform">
+      Username : <input type="text" id="username" name="user"><br>
+      Password : <input type="text" id="password" name="pass"><br>
+      <button type="button" id="btnSubmit">Login/SignIn</button><br>
+      <button type="button" id="SignUp">SignUp</button>
 </div>
   <div id="image">
-      <img src="5342169.jpg" style="width:400px; height: 260px">
-      <input type="button" id="Likebutton" value="Like"><p><br></p>
+      <img src="5342169.jpg" style="width:400px; height: 260px"><br>
+      <input type="button" id="Likebutton" value="like">
+      <input type="button" id="disLikebutton" value="disLike"><br>
+      <p></p>
   </div>
   </body>
-<script>
-    $(document).ready(function (){
-        alert("document loaded")
-        $("#image").hide();
-        $("#btnSubmit").click(function (){
-            alert("request to validate")
-           var username =$('#username').val();
-           var password=$('#password').val();
-           $.ajax({
-               type :'POST',
-               url:'validate',
-               data:{ 'username' : username ,
-                   'password' : password
-               },
-               success: function (data){
-                   if(data=="error"){
-                       $("#result").html("Username or Password is wrong");
-
-                   }
-                   else{
-                       alert("validation successful")
-                       $("#form").hide();
-                       $("#result").html(data);
-                       $("#image").show(data);
-                       $("#Likebutton").on("click", function (){
-                           alert("like button has been clicked")
-                           $.ajax({
-                               type : 'GET',
-                               url : 'like',
-                               success : function(data){
-                                   if(data!="error"){
-                                       $("p").html(data);
-                                   }
-                               }
-                           })
-
-                       });
-
-                   }
-               }
-           });
-       });
-        /*$("#Likebutton").on("click", function (){
-            $.ajax({
-                type : 'GET',
-                url : 'like',
-                success : function(data){
-                    if(data!="error"){
-                        $("p").html(data);
-                    }
-                }
-            })
-
-        });*/
-    });
-</script>
+  <script src="validations.js"></script>
+  <script src="loginOrSignup.js" ></script>
 
 </html>
