@@ -6,18 +6,20 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"type="text/javascript"></script>
   </head>
   <body>
-  <span id="result"></span>
+<%--  <span id="result"></span>--%>
 
   <div id ="signUpForm">
       Username : <input type="text" id="signUpUser"><br>
       Password : <input type="text" id="signUpPassword"><br>
       Confirm Password : <input type="text" id="confirm">
       <button type="button" id="Register">SignUp</button>
+      <span id="result"></span>
+      <a href="#">Return to home page</a>
   </div>
-     <a href="#">Return to home page</a>
 
 
-<div id ="form" name="myform">
+
+<div id ="form">
       Username : <input type="text" id="username" name="user"><br>
       Password : <input type="text" id="password" name="pass"><br>
       <button type="button" id="btnSubmit">Login/SignIn</button><br>
@@ -30,7 +32,6 @@
       <p></p>
   </div>
   </body>
-  <script src="validations.js"></script>
   <script src="loginOrSignup.js" ></script>
 
 </html>
