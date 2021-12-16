@@ -31,6 +31,6 @@ jobs:
       with:
         arguments: build
     - name: Running
-      run: gradle  
+      run: gradle run
   
     
