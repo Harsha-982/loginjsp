@@ -16,6 +16,7 @@ on:
 jobs:
   build:
 
+
     runs-on: macos-latest
 
     steps:
@@ -29,5 +30,9 @@ jobs:
       uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
       with:
         arguments: build
+    - name : Run 
+      run: gradle copyfiles
+    - name: Running
+      run: gradle run
   
     
