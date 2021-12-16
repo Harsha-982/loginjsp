@@ -33,6 +33,7 @@ dependencies {
 
     implementation 'org.eclipse.jetty:apache-jsp:9.2.15.v20160210'
     implementation 'org.eclipse.jetty:jetty-plus:9.4.43.v20210629'
+    implementation 'org.eclipse.jetty:jetty-annotations:9.4.43.v20210629'
 }
 
 test {
