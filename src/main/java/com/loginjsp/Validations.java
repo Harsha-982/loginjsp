@@ -13,7 +13,7 @@ import java.io.PrintWriter;
 
 
 public class Validations extends HttpServlet {
-
+    @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/plain");
         PrintWriter out=response.getWriter();

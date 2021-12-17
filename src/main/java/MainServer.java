@@ -23,7 +23,6 @@ public class MainServer {
         classlist.addBefore("org.eclipse.jetty.webapp.JettyWebXmlConfiguration", "org.eclipse.jetty.annotations.AnnotationConfiguration");
         server.setHandler(context);
 
-        System.out.println("Server Started ! ");
         server.start();
         server.join();
     }

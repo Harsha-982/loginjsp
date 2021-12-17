@@ -10,13 +10,10 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 public class LikePage extends HttpServlet
-{  static int count =0;
-
+{  private static int count =0;
+    @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
             PrintWriter out= response.getWriter();
-//            count=count+1;
-
-//            String feedback=request.getParameter("feedback");
 
             HttpSession session= request.getSession();
             String username=session.getAttribute("username").toString();
