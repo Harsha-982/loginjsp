@@ -5,7 +5,7 @@
          version="4.0">
     <servlet>
         <servlet-name>validate</servlet-name>
-        <servlet-class>Validations</servlet-class>
+        <servlet-class>com.loginjsp.Validations</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>validate</servlet-name>
@@ -14,7 +14,7 @@
 
     <servlet>
         <servlet-name>like</servlet-name>
-        <servlet-class>LikePage</servlet-class>
+        <servlet-class>com.loginjsp.LikePage</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>like</servlet-name>
@@ -23,7 +23,7 @@
 
     <servlet>
         <servlet-name>registerCheck</servlet-name>
-        <servlet-class>RegisterCheck</servlet-class>
+        <servlet-class>com.loginjsp.RegisterCheck</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>registerCheck</servlet-name>
