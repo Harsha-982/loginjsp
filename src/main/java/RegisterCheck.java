@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 public class RegisterCheck extends HttpServlet {
-    int count=0;
+    static int count=0;
     public void doGet(HttpServletRequest request,HttpServletResponse response) throws IOException {
         PrintWriter out = response.getWriter();
         String newUserName = request.getParameter("signUpUser");
